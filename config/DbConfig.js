@@ -1,5 +1,7 @@
 const mongoose=require("mongoose")
-const url="mongodb+srv://bodakuntimanishkumar:QVPlZYGOsbzPpDwb@cluster0.w7fbioz.mongodb.net/"
+const dotenv=require("dotenv")
+dotenv.config()
+const url=process.env.monogoDbConnect
 // const uri="mongodb://localhost:27017/"
 
 async function mongodb(){
