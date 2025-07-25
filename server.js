@@ -12,7 +12,7 @@ app.use(express.urlencoded())
 
 
 app.use(cors({
-    origin:["http://localhost:5174","https://node-api-react.vercel.app"]
+    origin:["http://localhost:5173","https://node-api-react.vercel.app"]
 }))
 
 app.get("/",(req,res)=>{
