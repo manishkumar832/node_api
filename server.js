@@ -2,6 +2,7 @@ const express=require("express")
 const app=express()
 const {mongodb}=require("./config/DbConfig.js")
 const route=require("./routes/ApiRoutes.js")
+const cors=require("cors")
 
 
 mongodb()
@@ -9,6 +10,10 @@ mongodb()
 app.use(express.json())
 app.use(express.urlencoded())
 
+
+app.use(cors({
+    origin:"http://localhost:5173",
+}))
 
 app.get("/",(req,res)=>{
     res.send("hii hello")
